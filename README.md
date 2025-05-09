@@ -146,6 +146,76 @@ sns.histplot(data=df,x="Pclass", hue="Survived", kde=True)
 ```
 ![image](https://github.com/user-attachments/assets/c6f71ee2-24e9-4e9b-bbb0-3087233831d2)
 
+```
+tips=sns.load_dataset('tips')
+sns.boxplot(x=tips['day'], y=tips ['total_bill'], hue=tips['sex'])
+```
+![image](https://github.com/user-attachments/assets/1cd8eae0-bcfb-4a3f-9c60-781c756d0aa4)
+
+```
+sns.boxplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, boxprops={"facecolor": "lightblue", "edgecolor": "darkblue"},
+whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
+```
+![image](https://github.com/user-attachments/assets/fc1b2902-3ce6-4262-9eab-7d198f2c6c3e)
+
+```
+sns.violinplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, palette="Set3", inner="quartile")
+plt.xlabel("Day of the Week")
+plt.ylabel("Total Bill")
+plt.title("Violin Plot of Total Bill by Day and Smoker Status")
+```
+![image](https://github.com/user-attachments/assets/5e1280c7-5a15-4470-a6f6-139ef3fc71fe)
+
+```
+mart=pd.read_csv("/content/titanic_dataset (1).csv")
+mart
+```
+![image](https://github.com/user-attachments/assets/35bee23c-ec1f-4e3c-a096-25ca7780a8cc)
+
+```
+mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']]
+mart.head(10)
+```
+![image](https://github.com/user-attachments/assets/072ab36c-9668-4a91-967c-7a037eae10d4)
+
+```
+sns.kdeplot(data=mart,x='PassengerId')
+```
+![image](https://github.com/user-attachments/assets/2a56da8c-c7a1-4c12-9cae-0ddf8a07aafb)
+
+```
+sns.kdeplot(data=mart,x='Age')
+```
+![image](https://github.com/user-attachments/assets/02a77015-5c19-41e1-9454-fcfdfdf3c100)
+
+```
+sns.kdeplot(data=mart)
+```
+![image](https://github.com/user-attachments/assets/4520f9b3-2a18-45d1-bdc0-b6af79a8a304)
+
+```
+sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
+```
+![image](https://github.com/user-attachments/assets/097c5450-0f35-41fa-889b-866359e4079f)
+
+```
+sns.kdeplot(data=mart,x='PassengerId',y='Survived')
+```
+![image](https://github.com/user-attachments/assets/a6fe5741-99c4-4880-9ed6-928948c61680)
+
+```
+data = np.random.randint(low = 1, high = 100, size = (10,10))
+hm=sns.heatmap(data=data,annot=True)
+```
+![image](https://github.com/user-attachments/assets/335802ef-6e1a-4069-8f61-09983d2d397c)
+
+
+```
+hm=sns.heatmap(data=data)
+```
+![image](https://github.com/user-attachments/assets/73d0dbfb-3b52-473f-8a8f-92dcaee4ac2a)
+
+
 
 # Result:
- Include your result here
+ The program has been executed successfully.
